@@ -2,6 +2,13 @@
 
 Este projeto demonstra a implementação de Clean Architecture, Domain-Driven Design (DDD) e princípios SOLID em React Native com TypeScript.
 
+## 🌍 Languages / Idiomas
+
+- 🇧🇷 **[Português (Portuguese)](README.md)** - Documentação principal
+- 🇺🇸 **[English](README_EN.md)** - English documentation
+
+---
+
 ## 🏗️ Arquitetura
 
 ### **Clean Architecture**
@@ -172,11 +179,8 @@ npx expo build:ios
 ## 📚 Documentação
 
 ### **Arquivos de Documentação**
-- `README.md`: Documentação principal
-- `docs/SEARCH_OPTIMIZATION.md`: Otimizações de busca (histórico)
-- `docs/FLUID_SEARCH.md`: Busca fluida (histórico)
-- `docs/FOCUS_SOLUTION.md`: Solução de foco (histórico)
-- `docs/SIMPLE_SOLUTION.md`: Solução simplificada (histórico)
+- `README.md`: Documentação principal (Português)
+- `README_EN.md`: Documentação em inglês (English)
 
 ## 🤝 Contribuição
 
