@@ -1,169 +1,169 @@
 # React Native Clean Architecture - DDD & SOLID
 
-Este projeto demonstra a implementação de Clean Architecture, Domain-Driven Design (DDD) e princípios SOLID em React Native com TypeScript.
+This project demonstrates the implementation of Clean Architecture, Domain-Driven Design (DDD) and SOLID principles in React Native with TypeScript.
 
 ## 🌍 Languages / Idiomas
 
-- 🇧🇷 **[Português (Portuguese)](README.md)** - Documentação principal
-- 🇺🇸 **[English](README_EN.md)** - English documentation
+- 🇺🇸 **[English](README.md)** - Main documentation
+- 🇧🇷 **[Português (Portuguese)](README_PT-BR.md)** - Documentação em português
 
 ---
 
-## 🏗️ Arquitetura
+## 🏗️ Architecture
 
 ### **Clean Architecture**
-- **Presentation Layer**: Componentes React Native e hooks
-- **Domain Layer**: Lógica de negócio e entidades
-- **Infrastructure Layer**: APIs e serviços externos
+- **Presentation Layer**: React Native components and hooks
+- **Domain Layer**: Business logic and entities
+- **Infrastructure Layer**: APIs and external services
 
 ### **Domain-Driven Design (DDD)**
 - **Entities**: Post, User
 - **Value Objects**: IDs, timestamps
 - **Services**: postService, postApi
-- **Repositories**: Abstração para acesso a dados
+- **Repositories**: Abstraction for data access
 
 ### **SOLID Principles**
-- **Single Responsibility**: Cada classe tem uma responsabilidade
-- **Open/Closed**: Extensível sem modificação
-- **Liskov Substitution**: Interfaces bem definidas
-- **Interface Segregation**: Interfaces específicas
-- **Dependency Inversion**: Dependências invertidas
+- **Single Responsibility**: Each class has a single responsibility
+- **Open/Closed**: Extensible without modification
+- **Liskov Substitution**: Well-defined interfaces
+- **Interface Segregation**: Specific interfaces
+- **Dependency Inversion**: Inverted dependencies
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-- **React Native** - Framework mobile
-- **TypeScript** - Tipagem estática
-- **Tanstack React Query** - Gerenciamento de estado e cache
-- **React Navigation** - Navegação
-- **Lodash** - Utilitários JavaScript
+- **React Native** - Mobile framework
+- **TypeScript** - Static typing
+- **Tanstack React Query** - State management and caching
+- **React Navigation** - Navigation
+- **Lodash** - JavaScript utilities
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 src/
-├── components/          # Componentes reutilizáveis
-│   ├── ui/             # Componentes de UI
-│   └── layout/         # Componentes de layout
-├── domain/             # Camada de domínio
-│   └── Post/           # Domínio de posts
-│       ├── postApi.ts      # Infraestrutura (API)
-│       ├── postService.ts  # Serviço de domínio
-│       ├── postHooks.ts    # Hooks React Query
-│       └── postListMock.ts # Dados mockados
-├── screens/            # Telas da aplicação
+├── components/          # Reusable components
+│   ├── ui/             # UI components
+│   └── layout/         # Layout components
+├── domain/             # Domain layer
+│   └── Post/           # Post domain
+│       ├── postApi.ts      # Infrastructure (API)
+│       ├── postService.ts  # Domain service
+│       ├── postHooks.ts    # React Query hooks
+│       └── postListMock.ts # Mocked data
+├── screens/            # Application screens
 │   └── app/
-│       └── HomeScreen/     # Tela principal
-├── types/              # Tipos TypeScript
-└── utils/              # Utilitários e hooks
+│       └── HomeScreen/     # Main screen
+├── types/              # TypeScript types
+└── utils/              # Utilities and hooks
 ```
 
-## 🎯 Funcionalidades
+## 🎯 Features
 
-### **Tela Principal (HomeScreen)**
-- ✅ Lista de posts com scroll infinito
-- ✅ Header fixo com título
+### **Main Screen (HomeScreen)**
+- ✅ Infinite scroll post list
+- ✅ Fixed header with title
 - ✅ Loading states
 - ✅ Error handling
 - ✅ Pull to refresh
-- ✅ Cache inteligente com React Query
+- ✅ Smart caching with React Query
 
-### **Arquitetura Limpa**
-- ✅ Separação clara de responsabilidades
-- ✅ Inversão de dependências
-- ✅ Testabilidade
-- ✅ Manutenibilidade
-- ✅ Escalabilidade
+### **Clean Architecture**
+- ✅ Clear separation of responsibilities
+- ✅ Dependency inversion
+- ✅ Testability
+- ✅ Maintainability
+- ✅ Scalability
 
-## 🛠️ Configuração
+## 🛠️ Setup
 
-### **Instalação**
+### **Installation**
 ```bash
 npm install
 ```
 
-### **Execução**
+### **Execution**
 ```bash
 npx expo start
 ```
 
-### **Desenvolvimento**
+### **Development**
 ```bash
-# Verificar tipos TypeScript
+# Check TypeScript types
 npx tsc --noEmit
 
-# Linting (se configurado)
+# Linting (if configured)
 npx eslint src/
 ```
 
-## 📊 Componentes
+## 📊 Components
 
 ### **Presentational Components**
-- `PostItem`: Exibe um post individual
-- `LoadingSpinner`: Indicador de carregamento
-- `ErrorMessage`: Exibe erros com retry
-- `Screen`: Layout base com safe area
+- `PostItem`: Displays an individual post
+- `LoadingSpinner`: Loading indicator
+- `ErrorMessage`: Displays errors with retry
+- `Screen`: Base layout with safe area
 
 ### **Smart Components**
-- `HomeScreen`: Gerencia estado e lógica de negócio
+- `HomeScreen`: Manages state and business logic
 
 ## 🔄 Hooks
 
 ### **React Query Hooks**
-- `usePosts`: Busca todos os posts
-- `usePost`: Busca post por ID
-- `usePostsByUser`: Busca posts por usuário
+- `usePosts`: Fetches all posts
+- `usePost`: Fetches post by ID
+- `usePostsByUser`: Fetches posts by user
 
 ### **Utility Hooks**
-- `useDebounce`: Debounce de valores
-- `useSearchWithDebounce`: Busca com debounce
+- `useDebounce`: Value debouncing
+- `useSearchWithDebounce`: Search with debounce
 
 ## 🎨 UI/UX
 
 ### **Design System**
-- Cores consistentes
-- Tipografia hierárquica
-- Espaçamentos padronizados
-- Componentes reutilizáveis
+- Consistent colors
+- Hierarchical typography
+- Standardized spacing
+- Reusable components
 
-### **Experiência do Usuário**
-- Loading states informativos
-- Error handling amigável
-- Feedback visual claro
-- Performance otimizada
+### **User Experience**
+- Informative loading states
+- Friendly error handling
+- Clear visual feedback
+- Optimized performance
 
-## 🔧 Configurações
+## 🔧 Configuration
 
 ### **TypeScript**
-- Path mapping configurado
-- Strict mode ativado
-- Tipos bem definidos
+- Path mapping configured
+- Strict mode enabled
+- Well-defined types
 
 ### **React Query**
-- Cache otimizado
-- Retry automático
+- Optimized cache
+- Automatic retry
 - Background refetch
-- Stale time configurado
+- Configured stale time
 
 ## 📈 Performance
 
-### **Otimizações**
-- React Query para cache
-- FlatList otimizada
-- useCallback para callbacks
-- Lazy loading de componentes
+### **Optimizations**
+- React Query for caching
+- Optimized FlatList
+- useCallback for callbacks
+- Component lazy loading
 
-### **Monitoramento**
-- Console logs para debug
+### **Monitoring**
+- Console logs for debugging
 - Performance profiling
 - Memory usage tracking
 
-## 🧪 Testes
+## 🧪 Testing
 
-### **Estrutura Preparada**
-- Componentes testáveis
-- Hooks isolados
-- Services mockáveis
-- APIs abstraídas
+### **Prepared Structure**
+- Testable components
+- Isolated hooks
+- Mockable services
+- Abstracted APIs
 
 ## 🚀 Deploy
 
@@ -176,15 +176,15 @@ npx expo build:android
 npx expo build:ios
 ```
 
-## 📚 Documentação
+## 📚 Documentation
 
-### **Arquivos de Documentação**
-- `README.md`: Documentação principal (Português)
-- `README_EN.md`: Documentação em inglês (English)
+### **Documentation Files**
+- `README.md`: Main documentation (English)
+- `README_EN.md`: Portuguese documentation (Português)
 
-## 🤝 Contribuição
+## 🤝 Contributing
 
-### **Padrões**
+### **Patterns**
 - Clean Architecture
 - DDD principles
 - SOLID principles
@@ -197,10 +197,10 @@ npx expo build:ios
 - Code review
 - Documentation updates
 
-## 📄 Licença
+## 📄 License
 
-Este projeto é um exemplo educacional de implementação de Clean Architecture em React Native.
+This project is an educational example of Clean Architecture implementation in React Native.
 
 ---
 
-**Desenvolvido com ❤️ seguindo as melhores práticas de arquitetura de software.** 
+**Developed with ❤️ following the best software architecture practices.** 
